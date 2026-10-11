@@ -48,7 +48,12 @@ CONFIG_SOURCE = (ROOT / "GnuChanNotification_config"
 CONFIG_DIR_NAME = "GnuChanNotification"
 CONFIG_FILE_NAME = "GnuChanNotification.py"
 
-LOGO_SOURCE = REPO_ROOT / "assets" / "logo.png"
+# The logo this repository ships (assets/ beside this file), installed into the
+# user's config directory beside the settings script. It is this repository's
+# own so a standalone checkout builds and installs without anything outside it;
+# the GnuchanOS repository carries the same picture for the themes and the ISO
+# build.
+LOGO_SOURCE = ROOT.parent / "assets" / "logo.png"
 
 SOURCES = (
     "notif_parser.c",
